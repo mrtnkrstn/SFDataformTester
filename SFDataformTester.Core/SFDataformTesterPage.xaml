@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mvx:MvxContentPage 
+    x:TypeArguments="viewModel:SFDataformTesterViewModel"
+    xmlns:viewModel="clr-namespace:SFDataformTester;assembly=SFDataformTester.Core"
+    xmlns:Mvx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:SFDataformTester" 
+    x:Class="SFDataformTester.SFDataformTesterPage"
+    xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms">
+    <StackLayout>
+        <dataForm:SfDataForm 
+            x:Name="dataForm"
+            HeightRequest="150"
+            LabelPosition="Top"
+            CommitMode="PropertyChanged"
+            DataObject="{Binding Item}" />
+        <Button
+            Text="Tap Me"
+            Command="{Binding PopulateCommand}" />
+    </StackLayout>
+</Mvx:MvxContentPage>
